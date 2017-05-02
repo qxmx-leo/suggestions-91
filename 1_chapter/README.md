@@ -27,7 +27,15 @@
     Although never is often better than *right* now.
     If the implementation is hard to explain, it's a bad idea.
     If the implementation is easy to explain, it may be a good idea.
-    Namespaces are one honking great idea -- let's do more of those!
+    Namespaces are one honking great idea -- let's do more of those!
+交换变量 a,b = b,a (packaging/unpackaging机制)
+遍历容器 (迭代器)
+for i in alist:
+    do_sth_with(i)
+安全关闭文件
+with open(path, 'f') as f:
+    do_sth_with(f)
+slice 语法 / reversed()
 
 (3)**占位符`%s`**，数量多了以后，很难清楚哪一个占位符对应哪一个
 实参。  
@@ -39,10 +47,14 @@
     print '%(greet)s from %(language)s.' % value
 
 更具有Pythonic风格的代码：
+字符串格式化方法 str.format()
 
     print '{greet} from {language}.'.format(
         greet = 'hellow world',
         language = 'Python')
+        
+包和模块命名用小写，单数，短小
+包仅仅作为命名空间，如只包含空的_init_.py 文件
 
 ### 建议2：编写Pythonic代码
 
